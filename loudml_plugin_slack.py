@@ -164,12 +164,11 @@ class SlackHook(Hook):
     ):
         # Deal with anomaly notification here
         try:
-            if (self.get_object(self.model['name']) == "alert"):
-                self.send_msg(
-                    'anomaly_end',
-                    date=str(dt.astimezone()),
-                    score=score,
-                    **kwargs
-                )
+            self.send_msg(
+                'anomaly_end',
+                date=str(dt.astimezone()),
+                score=score,
+                **kwargs
+            )
         except Exception as e:
             logging.error("Error in anomaly_end.")
