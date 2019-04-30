@@ -1,0 +1,16 @@
+{
+    "type": "slack",
+    "name": "slack-example",
+    "config": {
+        "templates": {
+            "anomaly_start": {
+                "color": "#FF0000",
+                "content": "Anomaly detected!\ndate={date}\nreason={reason}\nscore={score}\npredicted={predicted}\nobserved={observed}"
+            },
+            "anomaly_end": {
+                "color": "#0000FF",
+                "content": "Anomaly ended\ndate={date}\nscore={score}"
+            }
+        }
+    }
+}
